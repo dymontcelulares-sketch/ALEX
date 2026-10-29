@@ -3,7 +3,7 @@
   const chat = $("chat");
   let recognition = null, listening = false, ownerConfigured = false, ownerUnlocked = false;
   let unlockExpires = 0;
-  const API = (window.ALEX_API_URL || "").replace(/\/$/, "");
+  const API = "https://alex-assistente-api.onrender.com";
   const dangerousPattern = /\b(apag(ar|ue)|exclu(ir|a)|format(ar|e)|destruir|remover tudo|limpar todas as pastas)\b/i;
   const activation = /\balex\b/i;
 
