@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#080b12">
+  <title>ALEX — Assistente</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header><div class="brand"><span class="logo">A</span><div><h1>ALEX</h1><p>ASSISTENTE PESSOAL · 1.0</p></div></div><span id="status" class="status">Pronto</span></header>
+    <section class="hero">
+      <div id="orb" class="orb"><div class="orb-core"></div><span class="orb-ring"></span></div>
+      <h2 id="headline">Olá. Eu sou o ALEX.</h2>
+      <p id="subhead">Toque no microfone e diga “ALEX” seguido do seu pedido.</p>
+      <button id="micBtn" class="mic" aria-label="Ativar microfone"><span>🎙</span> <b>Falar com ALEX</b></button>
+      <p class="hint">O reconhecimento de voz depende do navegador e pode exigir internet.</p>
+    </section>
+    <section class="panel">
+      <div class="panel-title"><h3>Conversa</h3><button id="clearBtn" class="text-btn">Limpar</button></div>
+      <div id="chat" class="chat" aria-live="polite"><div class="msg alex"><b>ALEX</b><p>Estou pronto. Você pode perguntar as horas ou consultar informações disponíveis do aparelho.</p></div></div>
+    </section>
+    <section class="panel security">
+      <div class="panel-title"><h3>Segurança do proprietário</h3><span id="ownerBadge" class="badge">Não configurado</span></div>
+      <p class="muted">Cadastre um PIN para proteger ações sensíveis. O PIN é validado no servidor e nunca é enviado à IA.</p>
+      <label for="pin">PIN do proprietário (4–12 dígitos)</label>
+      <input id="pin" type="password" inputmode="numeric" minlength="4" maxlength="12" placeholder="Crie ou informe seu PIN" autocomplete="off">
+      <div class="actions"><button id="setupPin" class="secondary">Cadastrar PIN</button><button id="unlockBtn" class="secondary">Desbloquear ações</button></div>
+      <p id="securityMsg" class="muted" role="status">Ações destrutivas ficam bloqueadas nesta versão.</p>
+    </section>
+    <section class="panel">
+      <div class="panel-title"><h3>Dispositivo</h3><button id="deviceBtn" class="text-btn">Consultar</button></div>
+      <p id="deviceInfo" class="muted">O navegador só revela informações limitadas. Para modelo e versão exatos, será necessária uma integração Android nativa.</p>
+    </section>
+    <footer>Microfone apenas com permissão. Nunca conceda à IA acesso irrestrito aos seus arquivos.</footer>
+  </main>
+  <script>window.ALEX_API_URL = "https://SUA-API.onrender.com";</script>
+  <script src="dispositivo.js"></script>
+  <script src="arquivos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
